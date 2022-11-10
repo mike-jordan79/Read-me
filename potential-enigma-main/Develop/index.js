@@ -54,7 +54,11 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
-
+function writeToFile(data) {
+    fs.writeFile("README.md", generateMarkdownFile(data), (err) =>
+      err ? console.error(err) : console.log("Done")
+    );
+  }
 // TODO: Create a function to initialize app
 function init() {}
 
